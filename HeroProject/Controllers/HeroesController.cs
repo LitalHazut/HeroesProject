@@ -6,6 +6,7 @@ using System.Web.Http;
 using System.Web.Http.Description;
 using HeroProject.Data;
 using HeroProject.Models;
+using Serilog;
 
 namespace HeroProject.Controllers
 {
@@ -13,7 +14,7 @@ namespace HeroProject.Controllers
     public class HeroesController : ApiController
     {
         private Context db = new Context();
-
+       
         //GET: api/Heroes/idTrainer
 
         public List<Hero> GetHeroesForSpecificTrainer(int idTrainer)

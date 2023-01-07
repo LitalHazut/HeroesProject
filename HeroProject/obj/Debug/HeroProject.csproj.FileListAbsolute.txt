@@ -136,3 +136,13 @@ C:\Users\lital\Desktop\HeroProject\HeroProject\bin\System.IdentityModel.Tokens.J
 C:\Users\lital\Desktop\HeroProject\HeroProject\bin\System.IdentityModel.Tokens.Jwt.xml
 C:\Users\lital\Desktop\HeroProject\HeroProject\obj\Debug\HeroProject.Migrations.Initial.resources
 C:\Users\lital\Desktop\HeroProject\HeroProject\obj\Debug\HeroProject.csproj.GenerateResource.cache
+C:\Users\lital\Desktop\HeroProject\HeroProject\bin\Serilog.dll
+C:\Users\lital\Desktop\HeroProject\HeroProject\bin\Serilog.Settings.AppSettings.dll
+C:\Users\lital\Desktop\HeroProject\HeroProject\bin\Serilog.xml
+C:\Users\lital\Desktop\HeroProject\HeroProject\bin\Serilog.Sinks.File.dll
+C:\Users\lital\Desktop\HeroProject\HeroProject\bin\Serilog.Sinks.File.pdb
+C:\Users\lital\Desktop\HeroProject\HeroProject\bin\Serilog.Sinks.File.xml
+C:\Users\lital\Desktop\HeroProject\HeroProject\bin\log4net.dll
+C:\Users\lital\Desktop\HeroProject\HeroProject\bin\Serilog.Sinks.Console.dll
+C:\Users\lital\Desktop\HeroProject\HeroProject\bin\log4net.xml
+C:\Users\lital\Desktop\HeroProject\HeroProject\bin\Serilog.Sinks.Console.xml

@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using Serilog;
 using System.Web.Http;
 
 namespace HeroProject
 {
     public static class WebApiConfig
     {
+
         public static void Register(HttpConfiguration config)
         {
             // Web API configuration and services
@@ -20,11 +19,12 @@ namespace HeroProject
 
                 defaults: new { id = RouteParameter.Optional }
 
-
             );
             var json = config.Formatters.JsonFormatter;
             json.SerializerSettings.PreserveReferencesHandling = Newtonsoft.Json.PreserveReferencesHandling.Objects;
             config.Formatters.Remove(config.Formatters.XmlFormatter);
+
+   
         }
            
 

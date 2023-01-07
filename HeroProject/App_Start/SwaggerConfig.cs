@@ -130,7 +130,7 @@ namespace HeroProject
                         //c.CustomProvider((defaultProvider) => new CachingSwaggerProvider(defaultProvider));
                     })
                 .EnableSwaggerUi();
-                  
+
         }
     }
 }
