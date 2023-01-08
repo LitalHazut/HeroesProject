@@ -6,30 +6,30 @@ using System.Web.Http;
 using System.Web.Http.Description;
 using HeroProject.Data;
 using HeroProject.Models;
-using Serilog;
 
 namespace HeroProject.Controllers
 {
-
     public class HeroesController : ApiController
     {
         private Context db = new Context();
-       
-        //GET: api/Heroes/idTrainer
 
-        public List<Hero> GetHeroesForSpecificTrainer(int idTrainer)
+        //GET: api/Heroes/1
+
+        public List<Hero> GetByTrainerId(int trainerId)
         {
             var allHeros = db.Heroes;
-            var herosByTrainer = allHeros.Where(h => h.TrainerId == idTrainer);
+            var herosByTrainer = allHeros.Where(h => h.TrainerId == trainerId).AsEnumerable();
+            
             return herosByTrainer.ToList();
 
         }
 
-        // GET: api/Heroes/id
+        // GET : api/Heroes/1
         [ResponseType(typeof(Hero))]
-        public async Task<IHttpActionResult> GetHeroData(int id)
+        public async Task<IHttpActionResult> GetById(int heroId)
         {
-            Hero hero = await db.Heroes.FindAsync(id);
+            Hero hero = db.Heroes.Where(h => h.HeroId == heroId).AsEnumerable().FirstOrDefault();
+
             if (hero == null)
             {
                 return NotFound();
@@ -38,42 +38,7 @@ namespace HeroProject.Controllers
             return Ok(hero);
         }
 
-        // PUT: api/Heroes/5
-        //[ResponseType(typeof(void))]
-        //public async Task<IHttpActionResult> UpdateHeroData(int id, Hero hero)
-        //{
-        //    if (!ModelState.IsValid)
-        //    {
-        //        return BadRequest(ModelState);
-        //    }
-
-        //    if (id != hero.HeroId)
-        //    {
-        //        return BadRequest();
-        //    }
-
-        //    db.Entry(hero).State = EntityState.Modified;
-
-        //    try
-        //    {
-        //        await db.SaveChangesAsync();
-        //    }
-        //    catch (DbUpdateConcurrencyException)
-        //    {
-        //        if (!HeroExists(id))
-        //        {
-        //            return NotFound();
-        //        }
-        //        else
-        //        {
-        //            throw;
-        //        }
-        //    }
-
-        //    return StatusCode(HttpStatusCode.NoContent);
-        //}
-
-        // POST: api/Heroes
+        // POST : api/Heroes/CreateHeroForSpecificTrainer
         [ResponseType(typeof(Hero))]
         public async Task<IHttpActionResult> CreateHeroForSpecificTrainer(Hero hero)
         {
@@ -83,12 +48,13 @@ namespace HeroProject.Controllers
             }
 
             db.Heroes.Add(hero);
+            
             await db.SaveChangesAsync();
 
             return CreatedAtRoute("DefaultApi", new { id = hero.HeroId }, hero);
         }
 
-        // DELETE: api/Heroes/id
+        //DELETE :api/Heroes/DeleteHero/1
         [ResponseType(typeof(Hero))]
         public async Task<IHttpActionResult> DeleteHero(int id)
         {
@@ -104,18 +70,5 @@ namespace HeroProject.Controllers
             return Ok(hero);
         }
 
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing)
-            {
-                db.Dispose();
-            }
-            base.Dispose(disposing);
-        }
-
-        private bool HeroExists(int id)
-        {
-            return db.Heroes.Count(e => e.HeroId == id) > 0;
-        }
     }
 }

@@ -4,12 +4,10 @@ namespace HeroProject.Models
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Spatial;
 
     [Table("Trainer")]
     public partial class Trainer
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Trainer()
         {
             Heroes = new HashSet<Hero>();
@@ -31,7 +29,6 @@ namespace HeroProject.Models
 
         public DateTime CreatedDate { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Hero> Heroes { get; set; }
     }
 }

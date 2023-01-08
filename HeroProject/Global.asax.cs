@@ -9,18 +9,8 @@ namespace HeroProject
 {
     public class WebApiApplication : System.Web.HttpApplication
     {
-
-
         protected void Application_Start()
         {
-            using (var log = new LoggerConfiguration()
-            .WriteTo.Console()
-            .CreateLogger())
-            {
-                log.Information("Hello, Serilog!");
-                log.Warning("Goodbye, Serilog.");
-            }
-
             AreaRegistration.RegisterAllAreas();
             GlobalConfiguration.Configure(WebApiConfig.Register);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);

@@ -29,6 +29,6 @@ namespace HeroProject.Models
 
         public int? TrainerId { get; set; }
 
-        public virtual Trainer Trainer { get; set; }
+        
     }
 }
