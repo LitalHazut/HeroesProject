@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.Entity;
+﻿using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Net;
-using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Description;
@@ -18,15 +14,26 @@ namespace HeroProject.Controllers
     {
         private Context db = new Context();
 
-        // GET: api/Trainers
-        //public IQueryable<Trainer> GetTrainers()
-        //{
-        //    return db.Trainers;
-        //}
 
-        // GET: api/Trainers/5
+        // POST : api/Trainers/CreateTrainer
+        [ResponseType(typeof(Hero))]
+        public async Task<IHttpActionResult> CreateTrainer(Trainer trainer)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            db.Trainers.Add(trainer);
+
+            await db.SaveChangesAsync();
+
+            return CreatedAtRoute("DefaultApi", new { id = trainer.TrainerId }, trainer);
+        }
+
+        // GET: api/Trainers/1
         [ResponseType(typeof(Trainer))]
-        public async Task<IHttpActionResult> GetTrainerData(int id)
+        public async Task<IHttpActionResult> GetById(int id)
         {
             Trainer trainer = await db.Trainers.FindAsync(id);
             if (trainer == null)
@@ -71,47 +78,6 @@ namespace HeroProject.Controllers
 
             return StatusCode(HttpStatusCode.NoContent);
         }
-
-        // POST: api/Trainers
-        [ResponseType(typeof(Trainer))]
-        public async Task<IHttpActionResult> RegisterTrainerToSystem(Trainer trainer)
-        {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-
-            db.Trainers.Add(trainer);
-            await db.SaveChangesAsync();
-
-            return CreatedAtRoute("DefaultApi", new { id = trainer.TrainerId }, trainer);
-        }
-
-        // DELETE: api/Trainers/5
-        //[ResponseType(typeof(Trainer))]
-        //public async Task<IHttpActionResult> DeleteTrainer(int id)
-        //{
-        //    Trainer trainer = await db.Trainers.FindAsync(id);
-        //    if (trainer == null)
-        //    {
-        //        return NotFound();
-        //    }
-
-        //    db.Trainers.Remove(trainer);
-        //    await db.SaveChangesAsync();
-
-        //    return Ok(trainer);
-        //}
-
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing)
-            {
-                db.Dispose();
-            }
-            base.Dispose(disposing);
-        }
-
         private bool TrainerExists(int id)
         {
             return db.Trainers.Count(e => e.TrainerId == id) > 0;

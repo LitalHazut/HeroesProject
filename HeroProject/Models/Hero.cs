@@ -3,19 +3,20 @@ namespace HeroProject.Models
     using System;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
+    using System.Runtime.Serialization;
 
     [Table("Hero")]
     public partial class Hero
     {
+
         public int HeroId { get; set; }
 
         [Required]
         [StringLength(25)]
         public string FullName { get; set; }
 
-        [Required]
-        [StringLength(10)]
-        public string Ability { get; set; }
+        [EnumDataType(typeof(Ability))]
+        public Ability Ability { get; set; }
 
         public DateTime StartDate { get; set; }
 
@@ -29,6 +30,10 @@ namespace HeroProject.Models
 
         public int? TrainerId { get; set; }
 
-        
+    }
+    public enum Ability
+    {
+        Attacker = 0,
+        Defender = 1
     }
 }
