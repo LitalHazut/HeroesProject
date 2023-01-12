@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Data;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Description;
@@ -11,22 +10,23 @@ using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System;
+using System.Text;
+using Microsoft.Extensions.Logging;
 
 namespace HeroProject.Controllers
 {
     public class HeroesController : ApiController
     {
         private Context db = new Context();
+        
 
-        //GET: api/Heroes/1
-
-        public List<Hero> GetByTrainerId(int trainerId)
+        //GET: api/Heroes/1       
+        public List<Hero> GetByTrainerId( int trainerId)
         {
             var allHeros = db.Heroes;
             var herosByTrainer = allHeros.Where(h => h.TrainerId == trainerId).AsEnumerable();
-            
-            return herosByTrainer.ToList();
 
+            return herosByTrainer.ToList();
         }
 
         // GET : api/Heroes/1
@@ -38,6 +38,7 @@ namespace HeroProject.Controllers
             if (hero == null)
             {
                 return NotFound();
+
             }
 
             return Ok(hero);
@@ -53,7 +54,7 @@ namespace HeroProject.Controllers
             }
 
             db.Heroes.Add(hero);
-            
+
             await db.SaveChangesAsync();
 
             return CreatedAtRoute("DefaultApi", new { id = hero.HeroId }, hero);
@@ -95,11 +96,48 @@ namespace HeroProject.Controllers
             var token = new JwtSecurityToken(issuer, //Issure    
                             issuer,  //Audience    
                             permClaims,
-                            expires: DateTime.Now.AddDays(1),
+                            expires: DateTime.Now.AddSeconds(30),
                             signingCredentials: credentials);
             var jwt_token = new JwtSecurityTokenHandler().WriteToken(token);
             return new { data = jwt_token };
         }
 
+        [HttpPost]
+        public String GetName1()
+        {
+            if (User.Identity.IsAuthenticated)
+            {
+                var identity = User.Identity as ClaimsIdentity;
+                if (identity != null)
+                {
+                    IEnumerable<Claim> claims = identity.Claims;
+                }
+                return "Valid";
+            }
+            else
+            {
+                return "Invalid";
+            }
+        }
+
+        
+        [HttpPost]
+        public Object GetName2()
+        {
+            var identity = User.Identity as ClaimsIdentity;
+            if (identity != null)
+            {
+                IEnumerable<Claim> claims = identity.Claims;
+                var name = claims.Where(p => p.Type == "name").FirstOrDefault()?.Value;
+                return new
+                {
+                    data = name
+                };
+
+            }
+            return null;
+        }
     }
+
+
 }

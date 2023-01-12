@@ -4,6 +4,8 @@ using Microsoft.Owin.Security.Jwt;
 using Microsoft.Owin.Security;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using Serilog;
+
 [assembly: OwinStartup(typeof(HeroProject.Startup))]
 
 namespace HeroProject
@@ -12,7 +14,7 @@ namespace HeroProject
     {
         public void Configuration(IAppBuilder app)
         {
-            
+
             app.UseJwtBearerAuthentication(
                 new JwtBearerAuthenticationOptions
                 {
@@ -29,6 +31,9 @@ namespace HeroProject
                 });
 
         }
+
+
+
 
 
     }
