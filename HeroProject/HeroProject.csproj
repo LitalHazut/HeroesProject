@@ -677,7 +677,6 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Hero.cs" />
     <Compile Include="Models\Trainer.cs" />
-    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
