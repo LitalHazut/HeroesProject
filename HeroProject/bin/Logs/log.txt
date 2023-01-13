@@ -1,3 +1,0 @@
-2023-01-10 10:06:59.011 +02:00 [INF] Hello - Application_Start
-2023-01-10 10:07:18.730 +02:00 [INF] Hello - Application_Start
-2023-01-10 10:08:49.110 +02:00 [INF] Hello - Application_Start

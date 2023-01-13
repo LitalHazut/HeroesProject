@@ -6,12 +6,8 @@ using System.Web.Http;
 using System.Web.Http.Description;
 using HeroProject.Data;
 using HeroProject.Models;
-using Microsoft.IdentityModel.Tokens;
-using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System;
-using System.Text;
-using System.Configuration;
 
 namespace HeroProject.Controllers
 {
@@ -77,29 +73,29 @@ namespace HeroProject.Controllers
             return Ok(hero);
         }
 
-        public Object GetToken(string userId)
-        {
-            var key = ConfigurationManager.AppSettings["JwtKey"];
+        //public Object GetToken(string userId)
+        //{
+        //    var key = ConfigurationManager.AppSettings["JwtKey"];
 
-            var issuer = ConfigurationManager.AppSettings["JwtIssuer"];
+        //    var issuer = ConfigurationManager.AppSettings["JwtIssuer"];
 
-            var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(key));
-            var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
+        //    var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(key));
+        //    var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
 
-            //Create a List of Claims, Keep claims name short    
-            var permClaims = new List<Claim>();
-            permClaims.Add(new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()));
-            permClaims.Add(new Claim("userid", "userId"));
+        //    //Create a List of Claims, Keep claims name short    
+        //    var permClaims = new List<Claim>();
+        //    permClaims.Add(new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()));
+        //    permClaims.Add(new Claim("userid", "userId"));
 
-            //Create Security Token object by giving required parameters    
-            var token = new JwtSecurityToken(issuer, //Issure    
-                            issuer,  //Audience    
-                            permClaims,
-                            expires: DateTime.Now.AddDays(1),
-                            signingCredentials: credentials);
-            var jwt_token = new JwtSecurityTokenHandler().WriteToken(token);
-            return new { data = jwt_token };
-        }
+        //    //Create Security Token object by giving required parameters    
+        //    var token = new JwtSecurityToken(issuer, //Issure    
+        //                    issuer,  //Audience    
+        //                    permClaims,
+        //                    expires: DateTime.Now.AddDays(1),
+        //                    signingCredentials: credentials);
+        //    var jwt_token = new JwtSecurityTokenHandler().WriteToken(token);
+        //    return new { data = jwt_token };
+        //}
 
         [HttpPost]
         public String GetName1()
