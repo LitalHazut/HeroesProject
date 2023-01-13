@@ -2,11 +2,6 @@ using System.Web.Http;
 using WebActivatorEx;
 using HeroProject;
 using Swashbuckle.Application;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.OpenApi.Models;
-using Swashbuckle.AspNetCore.Filters;
-using System.IO;
-using System;
 
 [assembly: PreApplicationStartMethod(typeof(SwaggerConfig), "Register")]
 
@@ -24,15 +19,24 @@ namespace HeroProject
                 {
                     c.SingleApiVersion("v1", "HeroProject");
 
+                    c.OAuth2("oauth2")
+                        .Description("OAuth2 Implicit Grant")
+                        .Flow("implicit")
+                        .AuthorizationUrl("https://localhost:44335/core/connect/authorize")
+                        .TokenUrl("https://localhost:44335/core/connect/token")
+                        .Scopes(scopes =>
+                        {
+                            scopes.Add("read", "Read access to protected resources");
+                            scopes.Add("write", "Write access to protected resources");
+                        });
 
-                    c.OperationFilter<AddAuthorizationHeaderParameterOperationFilter>();
+                    c.OperationFilter<AssignOAuth2SecurityRequirements>();
+
+                    //c.OperationFilter<AddAuthorizationHeaderParameterOperationFilter>();
 
                 }).EnableSwaggerUi();
 
         }
-
-
-
 
         //c.OAuth2("oauth2")
         //    .Description("OAuth2 Implicit Grant")

@@ -322,6 +322,14 @@ C:\Users\lital\Desktop\HeroProject\HeroProject\bin\System.Collections.Immutable.
 C:\Users\lital\Desktop\HeroProject\HeroProject\bin\System.Reflection.Metadata.xml
 C:\Users\lital\Desktop\HeroProject\HeroProject\bin\System.Text.Json.xml
 C:\Users\lital\Desktop\HeroProject\HeroProject\bin\System.ValueTuple.xml
-C:\Users\lital\Desktop\HeroProject\HeroProject\bin\NLog.config
 C:\Users\lital\Desktop\HeroProject\HeroProject\bin\NLog.dll
 C:\Users\lital\Desktop\HeroProject\HeroProject\bin\NLog.xml
+C:\Users\lital\Desktop\HeroProject\HeroProject\bin\IdentityModel.dll
+C:\Users\lital\Desktop\HeroProject\HeroProject\bin\IdentityServer3.AccessTokenValidation.dll
+C:\Users\lital\Desktop\HeroProject\HeroProject\bin\Microsoft.IdentityModel.Protocol.Extensions.dll
+C:\Users\lital\Desktop\HeroProject\HeroProject\bin\IdentityModel.pdb
+C:\Users\lital\Desktop\HeroProject\HeroProject\bin\IdentityServer3.AccessTokenValidation.pdb
+C:\Users\lital\Desktop\HeroProject\HeroProject\bin\IdentityServer3.AccessTokenValidation.xml
+C:\Users\lital\Desktop\HeroProject\HeroProject\bin\IdentityServer3.AccessTokenValidation.dll.config
+C:\Users\lital\Desktop\HeroProject\HeroProject\bin\Microsoft.IdentityModel.Protocol.Extensions.pdb
+C:\Users\lital\Desktop\HeroProject\HeroProject\bin\Microsoft.IdentityModel.Protocol.Extensions.xml
