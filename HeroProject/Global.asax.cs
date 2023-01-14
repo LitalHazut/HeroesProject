@@ -18,11 +18,11 @@ namespace HeroProject
 
             HttpConfiguration config = GlobalConfiguration.Configuration;
 
-
-            //var log = new LoggerConfiguration()
-            // .WriteTo.File(System.Web.Hosting.HostingEnvironment.MapPath("~/bin/Logs/log.txt"))
-            // .CreateLogger();
-            //log.Information("Hello - Application_Start");
+            var log = new LoggerConfiguration()
+            .WriteTo.File(@"\Logs\log.txt", rollingInterval: RollingInterval.Day)
+            .CreateLogger();
+            Log.Logger = log;
+           
         }
 
 

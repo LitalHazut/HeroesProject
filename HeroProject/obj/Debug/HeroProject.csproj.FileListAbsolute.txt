@@ -326,3 +326,10 @@ C:\Users\lital\Desktop\HeroProject\HeroProject\obj\Debug\HeroProject.dll
 C:\Users\lital\Desktop\HeroProject\HeroProject\obj\Debug\HeroProject.pdb
 C:\Users\lital\Desktop\HeroProject\HeroProject\bin\IdentityModel.dll
 C:\Users\lital\Desktop\HeroProject\HeroProject\bin\IdentityModel.pdb
+C:\Users\lital\Desktop\HeroProject\HeroProject\bin\Serilog.Formatting.Compact.dll
+C:\Users\lital\Desktop\HeroProject\HeroProject\bin\Serilog.Sinks.PeriodicBatching.dll
+C:\Users\lital\Desktop\HeroProject\HeroProject\bin\Serilog.Sinks.Seq.dll
+C:\Users\lital\Desktop\HeroProject\HeroProject\bin\Serilog.Formatting.Compact.xml
+C:\Users\lital\Desktop\HeroProject\HeroProject\bin\Serilog.Sinks.File.pdb
+C:\Users\lital\Desktop\HeroProject\HeroProject\bin\Serilog.Sinks.PeriodicBatching.xml
+C:\Users\lital\Desktop\HeroProject\HeroProject\bin\Serilog.Sinks.Seq.xml

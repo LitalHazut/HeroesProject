@@ -1,8 +1,11 @@
 using System.Web.Http;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web.Http.Description;
 using WebActivatorEx;
 using HeroProject;
 using Swashbuckle.Application;
-
+using Swashbuckle.Swagger;
 [assembly: PreApplicationStartMethod(typeof(SwaggerConfig), "Register")]
 
 namespace HeroProject
@@ -22,8 +25,8 @@ namespace HeroProject
                     c.OAuth2("oauth2")
                         .Description("OAuth2 Implicit Grant")
                         .Flow("implicit")
-                        .AuthorizationUrl("https://localhost:44335/core/connect/authorize")
-                        .TokenUrl("https://localhost:44335/core/connect/token")
+                        .AuthorizationUrl("https://localhost:44335/v1/oauth/dialog")
+                        .TokenUrl("https://localhost:44335/v1/oauth/token")
                         .Scopes(scopes =>
                         {
                             scopes.Add("read", "Read access to protected resources");
