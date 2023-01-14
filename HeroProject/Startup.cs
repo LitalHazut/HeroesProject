@@ -13,7 +13,7 @@ namespace HeroProject
             // token validation
             app.UseIdentityServerBearerTokenAuthentication(new IdentityServerBearerTokenAuthenticationOptions
             {
-                Authority = "https://localhost:44335",
+                Authority = "https://localhost:44335/core",
                  DelayLoadMetadata = true
             });
             

@@ -9,6 +9,7 @@ using HeroProject.Models;
 using System.Security.Claims;
 using System;
 using Serilog;
+using Microsoft.Graph;
 
 namespace HeroProject.Controllers
 {
@@ -17,8 +18,8 @@ namespace HeroProject.Controllers
         private Context db = new Context();
 
         //GET: api/Heroes/1       
-        //[Authorize(Roles = "read")]
-        public List<Hero> GetByTrainerId( int trainerId)
+        [Authorize(Roles = "read")]
+        public List<Hero> GetByTrainerId(int trainerId)
         {
             var allHeros = db.Heroes;
             var herosByTrainer = allHeros.Where(h => h.TrainerId == trainerId).AsEnumerable();
@@ -96,41 +97,6 @@ namespace HeroProject.Controllers
         //    return new { data = jwt_token };
         //}
 
-        [HttpPost]
-        public String GetName1()
-        {
-            if (User.Identity.IsAuthenticated)
-            {
-                var identity = User.Identity as ClaimsIdentity;
-                if (identity != null)
-                {
-                    IEnumerable<Claim> claims = identity.Claims;
-                }
-                return "Valid";
-            }
-            else
-            {
-                return "Invalid";
-            }
-        }
-
-        
-        [HttpPost]
-        public Object GetName2()
-        {
-            var identity = User.Identity as ClaimsIdentity;
-            if (identity != null)
-            {
-                IEnumerable<Claim> claims = identity.Claims;
-                var name = claims.Where(p => p.Type == "name").FirstOrDefault()?.Value;
-                return new
-                {
-                    data = name
-                };
-
-            }
-            return null;
-        }
     }
 
 
