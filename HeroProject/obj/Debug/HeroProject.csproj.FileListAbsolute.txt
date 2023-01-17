@@ -333,3 +333,5 @@ C:\Users\lital\Desktop\HeroProject\HeroProject\bin\Serilog.Formatting.Compact.xm
 C:\Users\lital\Desktop\HeroProject\HeroProject\bin\Serilog.Sinks.File.pdb
 C:\Users\lital\Desktop\HeroProject\HeroProject\bin\Serilog.Sinks.PeriodicBatching.xml
 C:\Users\lital\Desktop\HeroProject\HeroProject\bin\Serilog.Sinks.Seq.xml
+C:\Users\lital\Desktop\HeroProject\HeroProject\bin\System.Web.Http.Owin.dll
+C:\Users\lital\Desktop\HeroProject\HeroProject\bin\System.Web.Http.Owin.xml

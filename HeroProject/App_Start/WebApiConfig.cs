@@ -1,6 +1,7 @@
 ﻿using Serilog;
 using System.Web.Http;
 using Microsoft.Owin.Security.OAuth;
+using Microsoft.AspNet.Identity;
 
 namespace HeroProject
 {
@@ -8,6 +9,8 @@ namespace HeroProject
     {
         public static void Register(HttpConfiguration config)
         {
+            config.SuppressDefaultHostAuthentication();
+            config.Filters.Add(new HostAuthenticationFilter(DefaultAuthenticationTypes.ExternalBearer));
 
             // Web API routes
             config.MapHttpAttributeRoutes();
