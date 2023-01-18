@@ -292,7 +292,6 @@ C:\Users\lital\Desktop\HeroProject\HeroProject\bin\Swashbuckle.AspNetCore.Swagge
 C:\Users\lital\Desktop\HeroProject\HeroProject\bin\System.Buffers.xml
 C:\Users\lital\Desktop\HeroProject\HeroProject\bin\System.Collections.Immutable.xml
 C:\Users\lital\Desktop\HeroProject\HeroProject\bin\System.Diagnostics.DiagnosticSource.xml
-C:\Users\lital\Desktop\HeroProject\HeroProject\bin\System.IdentityModel.Tokens.Jwt.pdb
 C:\Users\lital\Desktop\HeroProject\HeroProject\bin\System.IdentityModel.Tokens.Jwt.xml
 C:\Users\lital\Desktop\HeroProject\HeroProject\bin\System.Memory.xml
 C:\Users\lital\Desktop\HeroProject\HeroProject\bin\System.Net.Http.Formatting.xml
@@ -324,7 +323,6 @@ C:\Users\lital\Desktop\HeroProject\HeroProject\obj\Debug\HeroProject.csproj.Core
 C:\Users\lital\Desktop\HeroProject\HeroProject\obj\Debug\HeroProject.csproj.CopyComplete
 C:\Users\lital\Desktop\HeroProject\HeroProject\obj\Debug\HeroProject.dll
 C:\Users\lital\Desktop\HeroProject\HeroProject\obj\Debug\HeroProject.pdb
-C:\Users\lital\Desktop\HeroProject\HeroProject\bin\IdentityModel.dll
 C:\Users\lital\Desktop\HeroProject\HeroProject\bin\IdentityModel.pdb
 C:\Users\lital\Desktop\HeroProject\HeroProject\bin\Serilog.Formatting.Compact.dll
 C:\Users\lital\Desktop\HeroProject\HeroProject\bin\Serilog.Sinks.PeriodicBatching.dll
@@ -335,3 +333,4 @@ C:\Users\lital\Desktop\HeroProject\HeroProject\bin\Serilog.Sinks.PeriodicBatchin
 C:\Users\lital\Desktop\HeroProject\HeroProject\bin\Serilog.Sinks.Seq.xml
 C:\Users\lital\Desktop\HeroProject\HeroProject\bin\System.Web.Http.Owin.dll
 C:\Users\lital\Desktop\HeroProject\HeroProject\bin\System.Web.Http.Owin.xml
+C:\Users\lital\Desktop\HeroProject\HeroProject\bin\System.IdentityModel.Tokens.Jwt.pdb

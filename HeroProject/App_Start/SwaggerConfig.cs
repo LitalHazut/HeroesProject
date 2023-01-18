@@ -24,8 +24,8 @@ namespace HeroProject
                     c.OAuth2("oauth2")
                         .Description("OAuth2 Implicit Grant")
                         .Flow("implicit")
-                        .AuthorizationUrl("https://localhost:44335/core/connect/authorize")
-                        .TokenUrl("https://localhost:44335/core/connect/token")
+                        .AuthorizationUrl("https://localhost:44335/api/connect/authorize")
+                        .TokenUrl("https://localhost:44335/api/connect/token")
                         .Scopes(scopes =>
                         {
                             scopes.Add("read", "Read access to protected resources");
