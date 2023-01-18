@@ -334,3 +334,4 @@ C:\Users\lital\Desktop\HeroProject\HeroProject\bin\Unity.Abstractions.dll
 C:\Users\lital\Desktop\HeroProject\HeroProject\bin\Unity.Container.dll
 C:\Users\lital\Desktop\HeroProject\HeroProject\bin\Unity.Abstractions.pdb
 C:\Users\lital\Desktop\HeroProject\HeroProject\bin\Unity.Container.pdb
+C:\Users\lital\Desktop\HeroProject\HeroProject\obj\Debug\HeroProject.csproj.AssemblyReference.cache
