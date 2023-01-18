@@ -691,12 +691,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-<<<<<<< Updated upstream
-=======
     <Compile Include="Repositories\HeroRepository.cs" />
     <Compile Include="Repositories\Interfaces\IHeroRepository.cs" />
     <Compile Include="Repositories\Interfaces\ITrainerRepository.cs" />
->>>>>>> Stashed changes
     <Compile Include="Migrations\202301090703203_first_mig.cs" />
     <Compile Include="Migrations\202301090703203_first_mig.Designer.cs">
       <DependentUpon>202301090703203_first_mig.cs</DependentUpon>
