@@ -1,16 +1,12 @@
-﻿using Microsoft.Owin;
-using Owin;
-using IdentityServer3.AccessTokenValidation;
+﻿using Owin;
 using System.Web.Http;
 using Microsoft.Owin.Security.Jwt;
-using System.IdentityModel.Tokens;
 using Microsoft.Owin.Security;
+using Microsoft.IdentityModel.Tokens;
 using System.Text;
-using Microsoft.Owin.Security.OAuth;
-using System;
-using Microsoft.AspNet.Identity;
+using IdentityServer3.AccessTokenValidation;
 
-[assembly: OwinStartup(typeof(HeroProject.Startup))]
+//[assembly: OwinStartup(typeof(HeroProject.Startup))]
 
 namespace HeroProject
 {
@@ -24,9 +20,8 @@ namespace HeroProject
 
             app.UseIdentityServerBearerTokenAuthentication(new IdentityServerBearerTokenAuthenticationOptions
             {
-                Authority = "https://localhost:44335/v1",
-                DelayLoadMetadata = true
-
+                Authority = "https://localhost:44335/api",
+                DelayLoadMetadata = true,
             });
 
             //app.UseJwtBearerAuthentication(new JwtBearerAuthenticationOptions
