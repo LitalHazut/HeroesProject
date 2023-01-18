@@ -626,6 +626,12 @@
       <Private>True</Private>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Unity.Abstractions, Version=5.11.7.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.5.11.10\lib\net48\Unity.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Container, Version=5.11.11.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.5.11.10\lib\net48\Unity.Container.dll</HintPath>
+    </Reference>
     <Reference Include="WebActivatorEx, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
       <HintPath>..\packages\WebActivatorEx.2.0\lib\net40\WebActivatorEx.dll</HintPath>
     </Reference>
@@ -685,6 +691,12 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+<<<<<<< Updated upstream
+=======
+    <Compile Include="Repositories\HeroRepository.cs" />
+    <Compile Include="Repositories\Interfaces\IHeroRepository.cs" />
+    <Compile Include="Repositories\Interfaces\ITrainerRepository.cs" />
+>>>>>>> Stashed changes
     <Compile Include="Migrations\202301090703203_first_mig.cs" />
     <Compile Include="Migrations\202301090703203_first_mig.Designer.cs">
       <DependentUpon>202301090703203_first_mig.cs</DependentUpon>
@@ -697,7 +709,9 @@
     <Compile Include="Models\Hero.cs" />
     <Compile Include="Models\Trainer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\TrainerRepository.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="UnityResolver.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\HelpPage\HelpPage.css" />

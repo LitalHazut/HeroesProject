@@ -335,3 +335,11 @@ C:\Users\lital\Desktop\HeroProject\HeroProject\bin\Serilog.Sinks.PeriodicBatchin
 C:\Users\lital\Desktop\HeroProject\HeroProject\bin\Serilog.Sinks.Seq.xml
 C:\Users\lital\Desktop\HeroProject\HeroProject\bin\System.Web.Http.Owin.dll
 C:\Users\lital\Desktop\HeroProject\HeroProject\bin\System.Web.Http.Owin.xml
+<<<<<<< Updated upstream
+=======
+C:\Users\lital\Desktop\HeroProject\HeroProject\bin\System.IdentityModel.Tokens.Jwt.pdb
+C:\Users\lital\Desktop\HeroProject\HeroProject\bin\Unity.Abstractions.dll
+C:\Users\lital\Desktop\HeroProject\HeroProject\bin\Unity.Container.dll
+C:\Users\lital\Desktop\HeroProject\HeroProject\bin\Unity.Abstractions.pdb
+C:\Users\lital\Desktop\HeroProject\HeroProject\bin\Unity.Container.pdb
+>>>>>>> Stashed changes

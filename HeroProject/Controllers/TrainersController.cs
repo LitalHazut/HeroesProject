@@ -1,19 +1,20 @@
-﻿using System.Data.Entity;
-using System.Data.Entity.Infrastructure;
-using System.Linq;
+﻿using System.Data.Entity.Infrastructure;
 using System.Net;
 using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Description;
-using HeroProject.Data;
 using HeroProject.Models;
+using HeroProject.Repositories.Interfaces;
 
 namespace HeroProject.Controllers
 {
     public class TrainersController : ApiController
     {
-        private Context db = new Context();
-
+        private readonly ITrainerRepository _trainerRepository;
+        public TrainersController(ITrainerRepository trainerRepository)
+        {
+            this._trainerRepository = trainerRepository;
+        }
 
         // POST : api/Trainers/CreateTrainer
         [ResponseType(typeof(Hero))]
@@ -24,9 +25,7 @@ namespace HeroProject.Controllers
                 return BadRequest(ModelState);
             }
 
-            db.Trainers.Add(trainer);
-
-            await db.SaveChangesAsync();
+            _trainerRepository.CreateTrainer(trainer);
 
             return CreatedAtRoute("DefaultApi", new { id = trainer.TrainerId }, trainer);
         }
@@ -35,7 +34,7 @@ namespace HeroProject.Controllers
         [ResponseType(typeof(Trainer))]
         public async Task<IHttpActionResult> GetById(int id)
         {
-            Trainer trainer = await db.Trainers.FindAsync(id);
+            Trainer trainer = _trainerRepository.GetById(id);
             if (trainer == null)
             {
                 return NotFound();
@@ -58,15 +57,14 @@ namespace HeroProject.Controllers
                 return BadRequest();
             }
 
-            db.Entry(trainer).State = EntityState.Modified;
-
+            _trainerRepository.UpdateTrainerData(id, trainer);
             try
             {
-                await db.SaveChangesAsync();
+                _trainerRepository.SaveChanges();
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!TrainerExists(id))
+                if (!_trainerRepository.TrainerExists(id))
                 {
                     return NotFound();
                 }
@@ -75,12 +73,7 @@ namespace HeroProject.Controllers
                     throw;
                 }
             }
-
             return StatusCode(HttpStatusCode.NoContent);
-        }
-        private bool TrainerExists(int id)
-        {
-            return db.Trainers.Count(e => e.TrainerId == id) > 0;
         }
     }
 }
