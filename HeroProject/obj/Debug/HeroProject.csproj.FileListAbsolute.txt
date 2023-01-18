@@ -265,8 +265,6 @@ C:\Users\lital\Desktop\HeroProject\HeroProject\bin\Microsoft.Graph.Core.xml
 C:\Users\lital\Desktop\HeroProject\HeroProject\bin\Microsoft.Identity.Client.xml
 C:\Users\lital\Desktop\HeroProject\HeroProject\bin\Microsoft.IdentityModel.JsonWebTokens.xml
 C:\Users\lital\Desktop\HeroProject\HeroProject\bin\Microsoft.IdentityModel.Logging.xml
-C:\Users\lital\Desktop\HeroProject\HeroProject\bin\Microsoft.IdentityModel.Protocol.Extensions.pdb
-C:\Users\lital\Desktop\HeroProject\HeroProject\bin\Microsoft.IdentityModel.Protocol.Extensions.xml
 C:\Users\lital\Desktop\HeroProject\HeroProject\bin\Microsoft.IdentityModel.Protocols.pdb
 C:\Users\lital\Desktop\HeroProject\HeroProject\bin\Microsoft.IdentityModel.Protocols.xml
 C:\Users\lital\Desktop\HeroProject\HeroProject\bin\Microsoft.IdentityModel.Protocols.OpenIdConnect.xml
@@ -315,7 +313,6 @@ C:\Users\lital\Desktop\HeroProject\HeroProject\bin\System.Web.WebPages.Razor.xml
 C:\Users\lital\Desktop\HeroProject\HeroProject\bin\Antlr3.Runtime.pdb
 C:\Users\lital\Desktop\HeroProject\HeroProject\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\lital\Desktop\HeroProject\HeroProject\bin\es\Microsoft.AspNet.Identity.EntityFramework.resources.dll
-C:\Users\lital\Desktop\HeroProject\HeroProject\obj\Debug\HeroProject.csproj.AssemblyReference.cache
 C:\Users\lital\Desktop\HeroProject\HeroProject\obj\Debug\HeroProject.Migrations.first_mig.resources
 C:\Users\lital\Desktop\HeroProject\HeroProject\obj\Debug\HeroProject.Migrations.second_mig.resources
 C:\Users\lital\Desktop\HeroProject\HeroProject\obj\Debug\HeroProject.csproj.GenerateResource.cache
@@ -323,7 +320,6 @@ C:\Users\lital\Desktop\HeroProject\HeroProject\obj\Debug\HeroProject.csproj.Core
 C:\Users\lital\Desktop\HeroProject\HeroProject\obj\Debug\HeroProject.csproj.CopyComplete
 C:\Users\lital\Desktop\HeroProject\HeroProject\obj\Debug\HeroProject.dll
 C:\Users\lital\Desktop\HeroProject\HeroProject\obj\Debug\HeroProject.pdb
-C:\Users\lital\Desktop\HeroProject\HeroProject\bin\IdentityModel.pdb
 C:\Users\lital\Desktop\HeroProject\HeroProject\bin\Serilog.Formatting.Compact.dll
 C:\Users\lital\Desktop\HeroProject\HeroProject\bin\Serilog.Sinks.PeriodicBatching.dll
 C:\Users\lital\Desktop\HeroProject\HeroProject\bin\Serilog.Sinks.Seq.dll
@@ -334,3 +330,7 @@ C:\Users\lital\Desktop\HeroProject\HeroProject\bin\Serilog.Sinks.Seq.xml
 C:\Users\lital\Desktop\HeroProject\HeroProject\bin\System.Web.Http.Owin.dll
 C:\Users\lital\Desktop\HeroProject\HeroProject\bin\System.Web.Http.Owin.xml
 C:\Users\lital\Desktop\HeroProject\HeroProject\bin\System.IdentityModel.Tokens.Jwt.pdb
+C:\Users\lital\Desktop\HeroProject\HeroProject\bin\Unity.Abstractions.dll
+C:\Users\lital\Desktop\HeroProject\HeroProject\bin\Unity.Container.dll
+C:\Users\lital\Desktop\HeroProject\HeroProject\bin\Unity.Abstractions.pdb
+C:\Users\lital\Desktop\HeroProject\HeroProject\bin\Unity.Container.pdb
