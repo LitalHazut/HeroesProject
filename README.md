@@ -6,7 +6,7 @@
 
 Clone or download the project 
 and run the project 
-add to url : /Swagger and the api will open and you will see this screen: 
+add to url : /Swagger , the api will open and you will see this screen: 
 
 
 
