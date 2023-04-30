@@ -1,6 +1,12 @@
 # Heroes Project
+
 <p> This project is Web API written in .net framework 4.8.x and use in MSSQL Server and use with swagger. </p>
 
+## How to Use:
+
+Clone or download the project 
+and run the project 
+add to url : /Swagger and the api will open and you will see this screen: 
 
 
 
